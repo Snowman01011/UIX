@@ -10,7 +10,7 @@ UIX is a small React + TypeScript component library starter built with Vite. It 
 --
 
 **Quick Links**
-- **Repo:** `c:\Users\Snowman\Documents\webProjects\UIX`
+- **Repo:** `https://github.com/Snowman01011/UIX`
 - **Entry:** `src/main.tsx`
 
 --
