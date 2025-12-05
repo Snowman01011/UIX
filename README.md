@@ -1,73 +1,110 @@
-# React + TypeScript + Vite
+(The file `c:\Users\Snowman\Documents\webProjects\UIX\README.md` exists, but is empty)
+# UIX — React UI Design Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+UIX is a small React + TypeScript component library starter built with Vite. It provides a set of reusable, accessible UI components and a lightweight development setup for designing and showcasing components.
 
-Currently, two official plugins are available:
+**Project Stack:** React, TypeScript, Vite, CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Status:** Starter project — add components and examples.
 
-## React Compiler
+--
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Quick Links**
+- **Repo:** `c:\Users\Snowman\Documents\webProjects\UIX`
+- **Entry:** `src/main.tsx`
 
-## Expanding the ESLint configuration
+--
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
+- Reusable, type-safe React components
+- Vite-powered fast dev server and build
+- Simple styling (CSS modules / global CSS ready)
+- Ready for Storybook or similar component explorers
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Prerequisites: Node.js (>= 16) and npm or pnpm.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Install dependencies:
+
+```
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Run the dev server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+npm run dev
+```
+
+Build for production:
+
+```
+npm run build
+```
+
+Preview the production build:
+
+```
+npm run preview
+```
+
+## Project Structure
+
+- `src/` — source files and React components
+	- `App.tsx` — example app using components
+	- `main.tsx` — app entry
+	- `assets/` — images and static assets
+- `public/` — static public files
+- `vite.config.ts` — Vite configuration
+
+Add components under `src/components/` (create this folder if missing).
+
+## Usage
+
+Create a component and import it into `App.tsx` or any other demo page. Keep components small, documented, and styleable via props and CSS variables.
+
+Example component usage:
+
+```tsx
+import { Button } from './components/Button';
+
+export default function Demo() {
+	return <Button onClick={() => alert('clicked')}>Click me</Button>;
+}
+```
+
+## Developing Components
+
+- Keep components focused and accessible (use proper ARIA attributes).
+- Expose styling via CSS custom properties when appropriate.
+- Add unit tests and Storybook stories for visual regression and documentation.
+
+Suggested dev workflow:
+
+1. Create component in `src/components/YourComponent`
+2. Add exports in an index barrel (e.g., `src/components/index.ts`)
+3. Add example usage in `src/App.tsx`
+4. Run `npm run dev` and iterate
+
+## Contributing
+
+Contributions are welcome. Please follow these guidelines:
+
+- Open an issue to discuss larger changes before implementing.
+- Keep PRs small and focused — one component or fix per PR.
+- Include examples or Storybook stories for new components.
+
+## Recommended Next Steps
+
+- Add `src/components/` and a few starter components (Button, Input, Card).
+- Integrate Storybook for interactive component documentation: `npx sb@latest init`.
+- Add automated tests with Vitest or Jest.
+
+## License
+
+Specify a license for the project (e.g., MIT) by adding a `LICENSE` file.
+
+---
+
+If you'd like, I can scaffold a few starter components (Button, Input, Card) and add Storybook configuration. Which would you prefer next?
