@@ -13,6 +13,8 @@
     "@tailwindcss/vite": "^4.1.17",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router": "^7.11.0",
+    "react-router-dom": "^7.11.0",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
@@ -28,5 +30,18 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
-  }
+  },
+  "description": "(The file `c:\\Users\\Snowman\\Documents\\webProjects\\UIX\\README.md` exists, but is empty)\r # UIX — React UI Design Components",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snowman01011/UIX.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Snowman01011/UIX/issues"
+  },
+  "homepage": "https://github.com/Snowman01011/UIX#readme"
 }
